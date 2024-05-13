@@ -20,6 +20,11 @@ def scan_port():
             #print(f"{Fore.LIGHTBLUE_EX}[+]{ip}:{port} is open, checking for minecraft server, response: {conv}{Style.RESET_ALL}")
             ms = minestat.MineStat(ip, port)
             ms.beta_query()
+            bad_chars = ['§0', '§1', '§2', '§3', '§4', '§5', '§6', '§7', '§8', '§9', '§a', '§b', '§c', '§d', '§e', '§f',
+             '§g', '§k', '§l', '§m', '§n', '§o', '§r']
+            for bad in bad_chars:
+                if bad in conv:
+                    conv = conv.replace(bad, '')
             if ms.online: #and ms.current_players > 0
                 print("------------------------------------")
                 print(f"{Fore.GREEN}[+]{ip}:{port} is open and Minecraft server{Style.RESET_ALL}")
