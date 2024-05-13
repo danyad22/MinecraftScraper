@@ -17,7 +17,7 @@ def scan_port():
             #print(f"{Fore.LIGHTBLUE_EX}[+]{ip}:{port} is open, checking for minecraft server, data: {get}{Style.RESET_ALL}")
             ms = minestat.MineStat(ip, port)
             ms.beta_query()
-            if ms.online and ms.current_players > 0: #and ms.current_players > 0
+            if ms.online: #and ms.current_players > 0
                 print("------------------------------------")
                 print(f"{Fore.GREEN}[+]{ip}:{port} is open and Minecraft server{Style.RESET_ALL}")
                 print(f"{Fore.YELLOW}Latency: %sms" % ms.latency + Style.RESET_ALL)
