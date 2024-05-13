@@ -28,6 +28,7 @@ def scan_port():
                     print(f'{Fore.LIGHTRED_EX}Players: %s' % ms.current_players + Style.RESET_ALL)
                 else:
                     print(f'{Fore.YELLOW}Players: %s' % ms.current_players + Style.RESET_ALL)
+                print(f'{Fore.YELLOW}Player list: %s' % ms.player_list + Style.RESET_ALL)
                 print(f'{Fore.YELLOW}Max players: %s' % ms.max_players + Style.RESET_ALL)
                 print(f'{Fore.YELLOW}Plugins: %s' % ms.plugins + Style.RESET_ALL)
                 print(f'{Fore.YELLOW}Map: %s' % ms.map + Style.RESET_ALL)
