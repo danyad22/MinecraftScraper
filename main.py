@@ -29,7 +29,7 @@ def scan_port():
                              '§g', '§k', '§l', '§m', '§n', '§o', '§r', '$']
                 for bad in bad_chars:
                     conv = conv.replace(bad, '')
-                if ms.online and ms.current_players > 0: # and ms.current_players > 0
+                if ms.online: # and ms.current_players > 0
                     print("------------------------------------")
                     print(f"{Fore.GREEN}[+]{ip}:{port} is open and Minecraft server{Style.RESET_ALL}")
                     print(f"{Fore.YELLOW}Latency: %sms" % ms.latency + Style.RESET_ALL)
